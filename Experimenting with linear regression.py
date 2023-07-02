@@ -72,9 +72,8 @@ best_beta = gen_seq(0.01)[1]
 print("Batch GD MSE:")
 print(f"train MSE = {(1/200) * np.linalg.norm(y_train - X_train @ best_beta, 2) ** 2}")
 print(f"test MSE = {(1/200) * np.linalg.norm(y_test - X_test @ best_beta, 2) ** 2}")
-print("")
+print()
 
-# Q1g
 def sto_grad(beta, i):
     return -2 * X_train[i,].T @ y_train[i] + 2 * X_train[i,].T @ X_train[i,] * beta + beta
 
@@ -108,7 +107,6 @@ print(f"train MSE = {(1/200) * np.linalg.norm(y_train - X_train @ best_beta, 2) 
 print(f"test MSE = {(1/200) * np.linalg.norm(y_test - X_test @ best_beta, 2) ** 2}")
 print()
 
-# 1j
 def alt_seq():
     beta = np.array([1,1,1,1,1,1,1,1], dtype=float).reshape(-1,1)
     seq = []
