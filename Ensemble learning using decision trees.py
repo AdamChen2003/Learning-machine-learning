@@ -24,7 +24,6 @@ fig = plt.figure(figsize=(7,7))
 dt = DecisionTreeRegressor(max_depth=1).fit(X,y)
 xx = np.linspace(0,1,1000)
 
-# Q1c
 def predict(T, depth, alpha):
     n = np.shape(X)[0]
     ft = np.zeros(np.shape(y)[0])
